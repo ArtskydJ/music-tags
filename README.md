@@ -49,14 +49,18 @@ musicTags(stream, function (err, meta) {
 
 #api
 
+```js
+var musicTags = require('music-tags')
+```
+
 ##musicTags(stream, [opts,] cb)
 
 - `stream` is a readable stream of an audio file
 - `opts` is an object, with the following options:
-	- `size` is the size of the file in bytes. If this option is specified, the duration will be calculated.
+	- `size` is the size of the file in bytes. If this option is specified, the `duration` will be calculated.
 - `data` is an object that looks something like the following:
 	- `artist` is an array of strings, one for each artist. E.g. `[ 'nervous_testpilot' ]`
-	- `album` is a string of the album name. E.g. 'Frozen Synapse OST'
+	- `album` is a string of the album name. E.g. `'Frozen Synapse OST'`
 	- `albumartist` is an array of strings, one for each album artist. E.g. `[ 'nervous_testpilot' ]`
 	- `title` is a string of the song's name. E.g. `'Switch'`
 	- `year` is a string of the year. E.g. `'2012'`
@@ -64,18 +68,13 @@ musicTags(stream, function (err, meta) {
 	- `disk` is an object. E.g. `{ no: 1, of: 1 }`
 	- `genre` is an array of strings, one for each genre. E.g. `['Electronic', 'Music']`
 	- `picture` is an array of objects. E.g. `[ { format: 'jpg', data: <Buffer> } ]`
-	- `duration` is a number in seconds. (Only if the `opts.size` is set.) E.g. `364`
-}
+	- `duration` is a number in seconds.  E.g. `364`. (Only if `opts.size` is set.)
 
 #install
 
 Install with [npm](https://npmjs.com):
 ```
 npm install music-tags
-```
-
-```js
-var musicTags = require('music-tags')
 ```
 
 #license
