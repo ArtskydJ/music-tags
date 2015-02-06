@@ -5,7 +5,7 @@ Grab audio tags from your music stream.
 
 Provides an alternative interface to the excellent [musicmetadata](https://github.com/leetreveil/musicmetadata) module.
 
-###Supports:
+### Supports:
 
 - mp3
 - m4a
@@ -14,7 +14,7 @@ Provides an alternative interface to the excellent [musicmetadata](https://githu
 - wma
 - wmv
 
-#example
+# example
 
 Display tags:
 
@@ -47,13 +47,13 @@ musicTags(stream, function (err, meta) {
 })
 ```
 
-#api
+# api
 
 ```js
 var musicTags = require('music-tags')
 ```
 
-##musicTags(stream, [opts,] cb)
+## musicTags(stream, [opts,] cb)
 
 - `stream` is a readable stream of an audio file
 - `opts` is an object, with the following options:
@@ -70,13 +70,13 @@ var musicTags = require('music-tags')
 	- `picture` is an array of objects. E.g. `[ { format: 'jpg', data: <Buffer> } ]`
 	- `duration` is a number in seconds.  E.g. `364`. (Only if `opts.size` is set.)
 
-#install
+# install
 
 Install with [npm](https://npmjs.com):
 ```
 npm install music-tags
 ```
 
-#license
+# license
 
 [VOL](http://veryopenlicense.com)
