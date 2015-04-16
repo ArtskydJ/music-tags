@@ -7,7 +7,7 @@ Provides an alternative interface to the excellent [musicmetadata][mm] module.
 
 ### update
 
-[`musicmetadata@1.x`][mm] has a very similar api to `music-tags`, which was created for `musicmetadata@0.6.3`.
+[`musicmetadata@1.x`][mm] has a very similar API to `music-tags`, which was created for `musicmetadata@0.6.3`. If you're interested in the API change, see `musicmetadata` commit [`a616a44`](https://github.com/leetreveil/musicmetadata/commit/a616a44ff04de7a87ce308347af293f25fe5872c).
 
 ### supports:
 
