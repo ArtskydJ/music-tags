@@ -1,4 +1,4 @@
-var test = require('tap').test
+var test = require('tape')
 var fs = require('fs')
 var each = require('async-each')
 var musicTags = require('./index.js')
@@ -14,26 +14,30 @@ function expected(x) {
 	}
 }
 
-function testFile(t) {
-	return function (index, next) {
-		var filename = [ 'test_1.ogg', 'test_2.mp3', 'test_3.flac' ][index]
-		var stream = fs.createReadStream('./test-audio/' + filename)
+test('test tags', function (t) {
+	t.plan(25)
+
+	var array = [
+		{ expect: expected(1), filename: 'test_1.ogg' },
+		{ expect: expected(2), filename: 'test_2.mp3' },
+		{ expect: expected(3), filename: 'test_3.flac' }
+	]
+
+	function iterator(piece, next) {
+		var stream = fs.createReadStream('./test-audio/' + piece.filename)
 		stream.on('error', function (e) {
 			t.notOk(e, 'stream error ' + e.message)
 		})
 		musicTags(stream, function (err, meta) {
 			t.notOk(err, err ? err.message : 'no error')
 			t.ok(meta, 'meta is truthey')
-			meta = meta || {}
-			var expect = expected(index + 1)
-			Object.keys(expect).forEach(function (key) {
-				t.deepEqual(meta[key], expect[key], key + ' is good')
+			if (!meta) meta = {}
+			Object.keys(piece.expect).forEach(function (key) {
+				t.deepEqual(meta[key], piece.expect[key], key + ' is good')
 			})
 			next()
 		})
 	}
-}
 
-test('test tags', function (t) {
-	each([0, 1, 2], testFile(t), t.end.bind(t))
+	each(array, iterator, t.end.bind(t))
 })
