@@ -3,9 +3,13 @@ music-tags
 
 Grab audio tags from your music stream.
 
-Provides an alternative interface to the excellent [musicmetadata](https://github.com/leetreveil/musicmetadata) module.
+Provides an alternative interface to the excellent [musicmetadata][mm] module.
 
-### Supports:
+### update
+
+[`musicmetadata@1.x`][mm] has a very similar api to `music-tags`, which was created for `musicmetadata@0.6.3`.
+
+### supports:
 
 - mp3
 - m4a
@@ -80,3 +84,5 @@ npm install music-tags
 # license
 
 [VOL](http://veryopenlicense.com)
+
+[mm]: https://github.com/leetreveil/musicmetadata
