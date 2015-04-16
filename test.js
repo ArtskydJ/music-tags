@@ -15,7 +15,7 @@ function expected(x) {
 }
 
 test('test tags', function (t) {
-	t.plan(25)
+	t.plan(24)
 
 	var array = [
 		{ expect: expected(1), filename: 'test_1.ogg' },
