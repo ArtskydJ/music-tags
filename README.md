@@ -1,6 +1,9 @@
 music-tags
 ==========
 
+[![Dependency Status](https://david-dm.org/artskydj/music-tags.svg)](https://david-dm.org/artskydj/music-tags)
+[![devDependency Status](https://david-dm.org/artskydj/music-tags/dev-status.svg)](https://david-dm.org/artskydj/music-tags#info=devDependencies)
+
 Grab audio tags from your music stream.
 
 Provides an alternative interface to the excellent [musicmetadata][mm] module.
