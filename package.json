@@ -1,6 +1,6 @@
 {
   "name": "music-tags",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Grab audio tags from your music stream",
   "main": "index.js",
   "scripts": {
