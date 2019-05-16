@@ -3,5 +3,5 @@ music-tags
 
 #### Deprecated!!!
 
-Use `musicmetadata` instead.
-<sub>[github](https://github.com/leetreveil/musicmetadata) - [npm](https://npmjs.com/package/musicmetadata)</sub>
+Use `music-metadata` instead.
+<sub>[github](https://github.com/Borewit/music-metadata) - [npm](https://npmjs.com/package/music-metadata)</sub>
